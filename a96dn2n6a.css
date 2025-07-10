@@ -377,14 +377,20 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 }
 
 .gallery-single img {
-  max-width: 90vw; /* ikut lebar skrin */
-  max-height: 80vh; /* elak terlalu tinggi */
   width: auto;
   height: auto;
+  max-width: 390px;  /* kekal dengan saiz asal atau maksimum 390px */
+  max-height: 500px; /* opsyenal, jika nak kawal tinggi */
   display: block;
   margin: 0 auto;
   border-radius: 12px;
-  object-fit: contain;
+}
+
+@media (max-width: 480px) {
+  .gallery-single img {
+    max-width: 300px;
+  }
+}
 
     label {
       display: block;
