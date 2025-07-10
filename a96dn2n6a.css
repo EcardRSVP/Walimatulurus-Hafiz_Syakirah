@@ -377,19 +377,19 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 }
 
 .gallery-single img {
-  width: 100%;
-  max-width: 90vw !important; /* Had maksimum ikut saiz viewport */
+  width: 100% !important;
+  max-width: min(90vw, 300px) !important; /* Responsif ikut viewport & hadkan 300px */
   height: auto !important;
-  display: block;
-  margin: 0 auto;
+  display: block !important;
+  margin: 0 auto !important;
   border-radius: 12px;
   object-fit: cover;
 }
 
-/* Skrin besar seperti laptop */
+
 @media (min-width: 768px) {
   .gallery-single img {
-    max-width: 400px !important;
+    max-width: 350px !important; /* had lebih besar sikit untuk laptop */
   }
 }
 
