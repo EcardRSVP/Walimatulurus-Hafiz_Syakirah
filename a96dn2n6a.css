@@ -378,13 +378,21 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 
 .gallery-single img {
   width: 100%;
-  max-width: 300px; /* atau ikut saiz anda */
+  max-width: 90vw; /* Had lebar ikut skrin - sesuai untuk telefon */
   height: auto;
   display: block;
   margin: 0 auto;
   border-radius: 12px;
   object-fit: cover;
 }
+
+/* Tambahan untuk skrin besar seperti laptop */
+@media (min-width: 768px) {
+  .gallery-single img {
+    max-width: 400px; /* Gambar tak terlalu besar di skrin besar */
+  }
+}
+
 
     label {
       display: block;
