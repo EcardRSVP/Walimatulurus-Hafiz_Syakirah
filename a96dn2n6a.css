@@ -377,14 +377,12 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 }
 
 .gallery-single img {
-  max-width: 90vw; /* ikut lebar skrin */
-  max-height: 80vh; /* elak terlalu tinggi */
-  width: auto;
+  width: 100%;
   height: auto;
+  max-width: 700px; /* hadkan saiz supaya tak terlalu besar */
   display: block;
   margin: 0 auto;
   border-radius: 12px;
-  object-fit: contain;
 }
 
     label {
