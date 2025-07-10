@@ -388,7 +388,7 @@ body, h1, h2, h3, h4, h5, h6, p, span, div, strong, em, label, input, button, td
 
 @media (max-width: 480px) {
   .gallery-single img {
-    max-width: 300px;
+    max-width: 100px;
   }
 }
 
