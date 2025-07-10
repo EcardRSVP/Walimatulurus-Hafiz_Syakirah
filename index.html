@@ -184,18 +184,10 @@
       
      <hr> 
 
-  <section class="galeri transparent-section">
+<section class="galeri transparent-section">
   <h1 class="font-e">GALERI</h1>
-  <div class="gallery-slider">
-    <button class="gallery-prev">&#10094;</button>
-    
-    <div class="gallery-viewport"> 
-    <div class="gallery-track">
-      <div class="gallery-slide"><img src="GambarGaleri1.jpg" alt="Gambar 1"></div>
-      </div>
-    </div>
-    
-    <button class="gallery-next">&#10095;</button>
+  <div class="gallery-single">
+    <img src="GambarGaleri1.jpg" alt="Gambar Galeri" />
   </div>
 </section>
 
@@ -213,8 +205,7 @@
       Amin Ya Rabbal Alamin
       </p>
   
-<div class="footer-credit" style="margin-top: 40px; text-align: center;">
-  <p>Created by KadDigitalNNA</p><br><br><br>
+<div class="footer-credit" style="margin-top: 20px; text-align: center;">
   
   <!-- Spacer -->
   <div style="margin: 20px 0;"></div>
@@ -1429,10 +1420,8 @@ function copyRek() {
     startBtn.addEventListener('click', startInvitation);
   }
 
-  document.body.addEventListener('touchstart', function once() {
-    music.play().catch(() => {});
-    document.body.removeEventListener('touchstart', once);
-
+  // ✅ INI KOD BARU - Sentiasa aktif pada semua peranti
+  window.addEventListener("DOMContentLoaded", () => {
     const track = document.querySelector('.gallery-track');
     const slides = document.querySelectorAll('.gallery-slide');
     const prevBtn = document.querySelector('.gallery-prev');
@@ -1443,20 +1432,21 @@ function copyRek() {
       track.style.transform = 'translateX(' + (-currentIndex * 100) + '%)';
     }
 
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
-      updateSlidePosition();
-    });
+    if (prevBtn && nextBtn && track && slides.length > 0) {
+      prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === 0) ? slides.length - 1 : currentIndex - 1;
+        updateSlidePosition();
+      });
 
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
-      updateSlidePosition();
-    });
+      nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex === slides.length - 1) ? 0 : currentIndex + 1;
+        updateSlidePosition();
+      });
 
-    // Init posisi
-    updateSlidePosition();
+      updateSlidePosition(); // Set awal
+    }
   });
-   </script>
+</script>
 
    <!-- ✅ SCRIPT UNTUK PAPAR STATUS TEMPAHAN -->
 <script src="n98hm1a2n.js"></script>
